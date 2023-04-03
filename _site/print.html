@@ -1,3 +1,7 @@
+
+
+
+
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
@@ -39,231 +43,159 @@
     .wrapper {
       max-width: unset !important;
     }
+    /* .print-header ul {
+      columns: 2;
+      -webkit-columns: 2;
+      -moz-columns: 2;
+    } */
+
+    .print-header ul li {
+      padding: 2px;
+      text-align: left;
+    }
+
+    .languages-list {
+      columns: 2;
+      -webkit-columns: 2;
+      -moz-columns: 2;
+    }
+
+    .section {
+      padding-top: -40px !important;
+      margin-top: -40px !important;
+    }
   </style>
   <body>
     <div class="wrapper">
-      
-<div class="sidebar-wrapper">
-
-  <div class="profile-container">
-
-    
-    <img class="avatar" src="/assets/images/profile.jpg" alt="profile picture" />
-    
-
-    
-    <h1 class="name">Ash Williams</h1>
-    
-
-    
-    <h3 class="tagline">Software Engineering Lecturer</h3>
-    
-
-  </div><!--//profile-container-->
-
-  <div class="contact-container container-block">
-  <ul class="list-unstyled contact-list">
-
-    
-    <li class="email"><i class="fas fa-envelope"></i>
-      <a href="mailto:ashley.williams@mmu.ac.uk">ashley.williams@mmu.ac.uk</a>
-    </li>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <li class="website"><i class="fas fa-globe-americas"></i>
-      <a href="http://ash-williams.github.io" target="_blank">ash-williams.github.io</a>
-    </li>
-    
-
-    
-    <li class="linkedin"><i class="fab fa-linkedin"></i>
-      <a href="https://linkedin.com/in/ash-williams-mmu" target="_blank">ash-williams-mmu</a>
-    </li>
-    
-
-    
-
-    
-    <li class="github"><i class="fab fa-github"></i>
-      <a href="http://github.com/ash-williams" target="_blank">ash-williams</a>
-    </li>
-    
-
-    
-
-    
-
-    
-    <li class="twitter"><i class="fab fa-twitter"></i>
-      <a href="https://twitter.com/@williamsash" target="_blank">@williamsash</a>
-    </li>
-    
-
-    
-
-    
-
-    
-
-    
-    <li class="pdf"><i class="fab fa-google"></i>
-      <a href="https://scholar.google.com/citations?user=6Vz4Yo8AAAAJ" target="_blank">6Vz4Yo8AAAAJ</a>
-    </li>
-    
-
-    
-    <li class="pdf"><i class="fab fa-researchgate"></i>
-      <a href="https://www.researchgate.net/profile/Ashley-Williams-4" target="_blank">Ashley-Williams-4</a>
-    </li>
-    
-
-    
-    <li class="pdf"><i class="fab fa-orcid"></i>
-      <a href="https://orcid.org/0000-0002-6888-0521" target="_blank">0000-0002-6888-0521</a>
-    </li>
-    
-
-    
-    <li class="pdf"><i class="fas fa-file-pdf"></i>
-      <a href="ash-williams.github.io/cv/ash-williams-cv.pdf" target="_blank">Resume PDF</a>
-    </li>
-    
-
-  </ul>
-</div><!--//contact-container-->
-
-
-  
-
-  
-
-<div class="languages-container container-block">
-
-  <h2 class="container-block-title">
-    Skills &amp; Proficiency
-  </h2>
-
-  <ul class="list-unstyled interests-list">
-    
-    <li>
-      RESTful APIs and OpenAPI
-      <!-- <span class="lang-desc">()</span> -->
-    </li>
-    
-    <li>
-      JavaScript
-      <!-- <span class="lang-desc">()</span> -->
-    </li>
-    
-    <li>
-      Node & Express
-      <!-- <span class="lang-desc">()</span> -->
-    </li>
-    
-    <li>
-      React Native
-      <!-- <span class="lang-desc">()</span> -->
-    </li>
-    
-    <li>
-      VueJS
-      <!-- <span class="lang-desc">()</span> -->
-    </li>
-    
-    <li>
-      MicroServices
-      <!-- <span class="lang-desc">()</span> -->
-    </li>
-    
-    <li>
-      MongoDB
-      <!-- <span class="lang-desc">()</span> -->
-    </li>
-    
-    <li>
-      SQL
-      <!-- <span class="lang-desc">()</span> -->
-    </li>
-    
-    <li>
-      Empircal methods
-      <!-- <span class="lang-desc">()</span> -->
-    </li>
-    
-    <li>
-      Literature Reviews and Systematic studies
-      <!-- <span class="lang-desc">()</span> -->
-    </li>
-    
-    <li>
-      Text Mining and NLP
-      <!-- <span class="lang-desc">()</span> -->
-    </li>
-    
-    <li>
-      AI and ML
-      <!-- <span class="lang-desc">()</span> -->
-    </li>
-    
-    <li>
-      Data Science
-      <!-- <span class="lang-desc">()</span> -->
-    </li>
-    
-  </ul>
-
-</div><!--//interests-->
-
-
-  
-
-<div class="interests-container container-block">
-
-  <h2 class="container-block-title">
-    Interests
-  </h2>
-
-  <ul class="list-unstyled interests-list">
-    
-
-      
-      <li>Climbing</li>
-      
-
-    
-
-      
-      <li>Skiing</li>
-      
-
-    
-
-      
-      <li><a href="https://www.instagram.com/ispylo/">My two dogs :)</a></li>
-      
-
-    
-  </ul>
-
-</div><!--//interests-->
-
-
-
-  
-
-</div><!--//sidebar-wrapper-->
-
 
       <div class="main-wrapper">
+        <div class="print-header">
+          <table style="width: 100%">
+            <tr>
+              <td style="vertical-align: top;">
+                <h1 class="name">Ash Williams</h1>
+                <h3 class="tagline">Software Engineering Lecturer</h3>
+              </td>
+              <td>
+                <ul class="list-unstyled contact-list">
+            
+                  
+                  <li class="email"><i class="fas fa-envelope"></i> ashley.williams@mmu.ac.uk
+                  </li>
+                  
+              
+                  
+                  <li class="website"><i class="fas fa-globe-americas"></i> ash-williams.github.io</li>
+                  
+              
+                  
+                  <li class="linkedin"><i class="fab fa-linkedin"></i> ash-williams-mmu</li>
+                  
+              
+  
+              
+                  
+                  <li class="github"><i class="fab fa-github"></i> ash-williams
+                  </li>
+                  
+              
+         
+              
+         
+              
+                  
+                  <li class="twitter"><i class="fab fa-twitter"></i> @williamsash
+                  </li>
+                  
+              
+       
+                        
+                  
+                  <li class="pdf"><i class="fab fa-google"></i> 6Vz4Yo8AAAAJ
+                  </li>
+                  
+              
+                  
+                  <li class="pdf"><i class="fab fa-researchgate"></i> Ashley-Williams-4
+                  </li>
+                  
+              
+                  
+                  <li class="pdf"><i class="fab fa-orcid"></i> 0000-0002-6888-0521
+                  </li>
+                  
+  
+              
+              </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- <div class="print-header">
+          
+            <h1 class="name">Ash Williams</h1>
+          
+
+          
+            <h3 class="tagline">Software Engineering Lecturer</h3>
+          
+          <br />
+
+          <div class="print-contacts">
+            <ul class="list-unstyled contact-list">
+            
+                
+                <li class="email"><i class="fas fa-envelope"></i> ashley.williams@mmu.ac.uk
+                </li>
+                
+            
+                
+                <li class="website"><i class="fas fa-globe-americas"></i> ash-williams.github.io</li>
+                
+            
+                
+                <li class="linkedin"><i class="fab fa-linkedin"></i> ash-williams-mmu</li>
+                
+            
+
+            
+                
+                <li class="github"><i class="fab fa-github"></i> ash-williams
+                </li>
+                
+            
+       
+            
+       
+            
+                
+                <li class="twitter"><i class="fab fa-twitter"></i> @williamsash
+                </li>
+                
+            
+     
+                      
+                
+                <li class="pdf"><i class="fab fa-google"></i> 6Vz4Yo8AAAAJ
+                </li>
+                
+            
+                
+                <li class="pdf"><i class="fab fa-researchgate"></i> Ashley-Williams-4
+                </li>
+                
+            
+                
+                <li class="pdf"><i class="fab fa-orcid"></i> 0000-0002-6888-0521
+                </li>
+                
+
+            
+            </ul>
+          </div> -->
+
+        
 
 <section class="section summary-section">
 
@@ -638,7 +570,177 @@ to Google Scholar.
 </section><!--//section-->
 
 
-</div>
+
+
+        <!-- <div class="print-languages">
+          <table>
+            <tr>
+              <td>
+                <h2 class="section-title">
+                  Skills &amp; Proficiency
+                </h2>
+              </td>
+              <td>
+                <h2 class="section-title">
+                  Interests
+                </h2>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <ul class="languages-list interests-list">
+                  
+                  <li>
+                    RESTful APIs and OpenAPI
+                  </li>
+                  
+                  <li>
+                    JavaScript
+                  </li>
+                  
+                  <li>
+                    Node & Express
+                  </li>
+                  
+                  <li>
+                    React Native
+                  </li>
+                  
+                  <li>
+                    VueJS
+                  </li>
+                  
+                  <li>
+                    MicroServices
+                  </li>
+                  
+                  <li>
+                    MongoDB
+                  </li>
+                  
+                  <li>
+                    SQL
+                  </li>
+                  
+                  <li>
+                    Empircal methods
+                  </li>
+                  
+                  <li>
+                    Literature Reviews and Systematic studies
+                  </li>
+                  
+                  <li>
+                    Text Mining and NLP
+                  </li>
+                  
+                  <li>
+                    AI and ML
+                  </li>
+                  
+                  <li>
+                    Data Science
+                  </li>
+                  
+                </ul>
+              </td>
+              <td>
+                <ul class="interests-list">
+                  
+                    <li>Climbing</li>        
+                  
+                    <li>Skiing</li>        
+                  
+                    <li>My two dogs :)</li>        
+                  
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </div> -->
+
+        <div class="print-languages" style="margin-top: -40px;">
+          <h2 class="section-title">
+            Skills &amp; Proficiency
+          </h2>
+        
+          <ul class="interests-list" style="columns: 3; column-gap: 1cm;">
+            
+            <li>
+              RESTful APIs and OpenAPI
+            </li>
+            
+            <li>
+              JavaScript
+            </li>
+            
+            <li>
+              Node & Express
+            </li>
+            
+            <li>
+              React Native
+            </li>
+            
+            <li>
+              VueJS
+            </li>
+            
+            <li>
+              MicroServices
+            </li>
+            
+            <li>
+              MongoDB
+            </li>
+            
+            <li>
+              SQL
+            </li>
+            
+            <li>
+              Empircal methods
+            </li>
+            
+            <li>
+              Literature Reviews and Systematic studies
+            </li>
+            
+            <li>
+              Text Mining and NLP
+            </li>
+            
+            <li>
+              AI and ML
+            </li>
+            
+            <li>
+              Data Science
+            </li>
+            
+          </ul>
+        </div>
+        
+        <br />
+        <div class="print-languages">
+          <h2 class="section-title">
+            Interests
+          </h2>
+
+          Outside of work I enjoy climbing, skiing, and walking my two dogs.
+        
+          <!-- <ul class="interests-list">
+            
+              <li>Climbing</li>        
+            
+              <li>Skiing</li>        
+            
+              <li>My two dogs :)</li>        
+            
+          </ul> -->
+        </div>
+
+      </div>
     </div>
     <!-- Javascript -->
 <script type="text/javascript" src="/assets/plugins/jquery-1.11.3.min.js"></script>

@@ -1,6 +1,9 @@
 ---
 #Add "layout: compress" here to compress the html code
 ---
+{% assign sidebar = site.data.data.sidebar %}
+{% assign languages = site.data.data.sidebar.languages %}
+{% assign interests = site.data.data.sidebar.interests %}
 
 <!DOCTYPE html>
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
@@ -16,12 +19,225 @@
     .wrapper {
       max-width: unset !important;
     }
+    /* .print-header ul {
+      columns: 2;
+      -webkit-columns: 2;
+      -moz-columns: 2;
+    } */
+
+    .print-header ul li {
+      padding: 2px;
+      text-align: left;
+    }
+
+    .languages-list {
+      columns: 2;
+      -webkit-columns: 2;
+      -moz-columns: 2;
+    }
+
+    .section {
+      padding-top: -40px !important;
+      margin-top: -40px !important;
+    }
   </style>
   <body>
     <div class="wrapper">
-      {% include sidebar.html %}
 
-      <div class="main-wrapper">{{ content }}</div>
+      <div class="main-wrapper">
+        <div class="print-header">
+          <table style="width: 100%">
+            <tr>
+              <td style="vertical-align: top;">
+                <h1 class="name">{{ sidebar.name }}</h1>
+                <h3 class="tagline">{{ sidebar.tagline }}</h3>
+              </td>
+              <td>
+                <ul class="list-unstyled contact-list">
+            
+                  {% if sidebar.email %}
+                  <li class="email"><i class="fas fa-envelope"></i> {{ sidebar.email }}
+                  </li>
+                  {% endif %}
+              
+                  {% if sidebar.website %}
+                  <li class="website"><i class="fas fa-globe-americas"></i> {{ sidebar.website }}</li>
+                  {% endif %}
+              
+                  {% if sidebar.linkedin %}
+                  <li class="linkedin"><i class="fab fa-linkedin"></i> {{ sidebar.linkedin }}</li>
+                  {% endif %}
+              
+  
+              
+                  {% if sidebar.github %}
+                  <li class="github"><i class="fab fa-github"></i> {{ sidebar.github }}
+                  </li>
+                  {% endif %}
+              
+         
+              
+         
+              
+                  {% if sidebar.twitter %}
+                  <li class="twitter"><i class="fab fa-twitter"></i> {{ sidebar.twitter }}
+                  </li>
+                  {% endif %}
+              
+       
+                        
+                  {% if sidebar.googlescholar %}
+                  <li class="pdf"><i class="fab fa-google"></i> {{ sidebar.googlescholar }}
+                  </li>
+                  {% endif %}
+              
+                  {% if sidebar.researchgate %}
+                  <li class="pdf"><i class="fab fa-researchgate"></i> {{ sidebar.researchgate }}
+                  </li>
+                  {% endif %}
+              
+                  {% if sidebar.orcid %}
+                  <li class="pdf"><i class="fab fa-orcid"></i> {{ sidebar.orcid }}
+                  </li>
+                  {% endif %}
+  
+              
+              </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- <div class="print-header">
+          {% if sidebar.name %}
+            <h1 class="name">{{ sidebar.name }}</h1>
+          {% endif %}
+
+          {% if sidebar.tagline %}
+            <h3 class="tagline">{{ sidebar.tagline }}</h3>
+          {% endif %}
+          <br />
+
+          <div class="print-contacts">
+            <ul class="list-unstyled contact-list">
+            
+                {% if sidebar.email %}
+                <li class="email"><i class="fas fa-envelope"></i> {{ sidebar.email }}
+                </li>
+                {% endif %}
+            
+                {% if sidebar.website %}
+                <li class="website"><i class="fas fa-globe-americas"></i> {{ sidebar.website }}</li>
+                {% endif %}
+            
+                {% if sidebar.linkedin %}
+                <li class="linkedin"><i class="fab fa-linkedin"></i> {{ sidebar.linkedin }}</li>
+                {% endif %}
+            
+
+            
+                {% if sidebar.github %}
+                <li class="github"><i class="fab fa-github"></i> {{ sidebar.github }}
+                </li>
+                {% endif %}
+            
+       
+            
+       
+            
+                {% if sidebar.twitter %}
+                <li class="twitter"><i class="fab fa-twitter"></i> {{ sidebar.twitter }}
+                </li>
+                {% endif %}
+            
+     
+                      
+                {% if sidebar.googlescholar %}
+                <li class="pdf"><i class="fab fa-google"></i> {{ sidebar.googlescholar }}
+                </li>
+                {% endif %}
+            
+                {% if sidebar.researchgate %}
+                <li class="pdf"><i class="fab fa-researchgate"></i> {{ sidebar.researchgate }}
+                </li>
+                {% endif %}
+            
+                {% if sidebar.orcid %}
+                <li class="pdf"><i class="fab fa-orcid"></i> {{ sidebar.orcid }}
+                </li>
+                {% endif %}
+
+            
+            </ul>
+          </div> -->
+
+        {{ content }}
+
+        <!-- <div class="print-languages">
+          <table>
+            <tr>
+              <td>
+                <h2 class="section-title">
+                  {{ languages.title }}
+                </h2>
+              </td>
+              <td>
+                <h2 class="section-title">
+                  {{ interests.title }}
+                </h2>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <ul class="languages-list interests-list">
+                  {% for language in languages.info %}
+                  <li>
+                    {{ language.idiom }}
+                  </li>
+                  {% endfor %}
+                </ul>
+              </td>
+              <td>
+                <ul class="interests-list">
+                  {% for interest in interests.info %}
+                    <li>{{ interest.item }}</li>        
+                  {% endfor %}
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </div> -->
+
+        <div class="print-languages" style="margin-top: -40px;">
+          <h2 class="section-title">
+            {{ languages.title }}
+          </h2>
+        
+          <ul class="interests-list" style="columns: 3; column-gap: 1cm;">
+            {% for language in languages.info %}
+            <li>
+              {{ language.idiom }}
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+        
+        <br />
+        <div class="print-languages">
+          <h2 class="section-title">
+            {{ interests.title }}
+          </h2>
+
+          Outside of work I enjoy climbing, skiing, and walking my two dogs.
+        
+          <!-- <ul class="interests-list">
+            {% for interest in interests.info %}
+              <li>{{ interest.item }}</li>        
+            {% endfor %}
+          </ul> -->
+        </div>
+
+      </div>
     </div>
     {% include scripts.html %}
   </body>
